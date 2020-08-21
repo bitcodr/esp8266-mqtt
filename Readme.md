@@ -9,4 +9,4 @@
 
 > const char *topic = "mqtt topic name";
 
-Compile the code to the board by VSCode PlatformIO or Arduino IDE, Publish a message like `on` to the MQTT broker you'll see the board built-in LED turns on and send `off` for turning off built-in LED
+Compile the code to the board with VSCode PlatformIO or Arduino IDE, Publish a message like `on` to the MQTT broker you'll see the board built-in LED turns on and send `off` for turning off built-in LED
