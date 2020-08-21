@@ -1,8 +1,8 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-const char *ssid = "";
-const char *password = "";
+const char *ssid = "AM-Home";
+const char *password = "am654321";
 
 // use onboard LED for convenience
 #define LED (2)
@@ -13,7 +13,7 @@ const char *password = "";
 // MQTT Configuration
 const char *serverHostname = "broker.hivemq.com";
 const unsigned int serverPort = 1883;
-const char *topic = "";
+const char *topic = "newAmiraliTest";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -51,8 +51,9 @@ void connectMQTT()
     if (client.connect(clientId.c_str()))
     {
       Serial.println("MQTT connected");
-      // Once connected, publish an announcement...
-      client.publish(topic, "hello from ESP8266");
+      // Once connected, publish WiFi mac address for an announcement...
+      const char *macAddress = WiFi.macAddress().c_str();
+      client.publish(topic, macAddress);
       // ... and resubscribe
       client.subscribe(topic);
     }

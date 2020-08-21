@@ -1,6 +1,7 @@
 # MQTT subscription in ESP8266 board
 
-## Configuration:
+## Configuration
+
 > const char *ssid = "your wifi name";
 
 > const char *password = "your wifi password";
