@@ -314,7 +314,7 @@ This project is open source and available under the MIT License.
 
 ## Author
 
-Your Name - [Your GitHub Profile](https://github.com/yourusername)
+Amir Roshanaei - [bitcodr](https://github.com/bitcodr)
 
 ## Acknowledgments
 
